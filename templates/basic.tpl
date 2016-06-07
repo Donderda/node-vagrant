@@ -11,7 +11,7 @@ Vagrant.configure(2) do |config|
   # https://docs.vagrantup.com.
 
   <% _.forEach(config.vm, function(value, key) { %>
-  config.vm.<%=key%> = "<%=value%>"
+  config.vm.<%=key%> = <%=value%>
   <% }); %>
 
   <% if(typeof config.network !== 'undefined') { %>
